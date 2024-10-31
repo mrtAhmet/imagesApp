@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* header'ı öne getirmek için z-index kullanın */
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2rem 10%;
+  }
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 1.25rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-decoration: none;
+  color: #ddd6cb;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+.logo > label {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav > ul > li > a {
+    padding: 0%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .nav > ul > li {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav > ul > li {
+    font-size: 18px;
+    text-align: center;
+  }
+  .nav > ul > li > a {
+    padding: 0%;
+  }
+
+  .logo > label {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .logo {
+    gap: 1rem;
+  }
+  .logo > label {
+    font-size: 15px;
+  }
+  .nav > ul > li {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .logo {
+    gap: 0.5rem;
+  }
+  .logo > label {
+    font-size: 12px;
+  }
+  .nav > ul > li {
+    font-size: 11px;
+    text-align: center;
+  }
+  .nav > ul {
+    gap: 0rem;
+  }
+}

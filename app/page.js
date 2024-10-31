@@ -1,95 +1,52 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import ImageSlider from "@/components/images/image-slider";
+import classes from "./page.module.css";
+import Link from "next/link";
+import MainInput from "@/components/main-input/main-input";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      <header className={classes.header}>
+        <div className={classes.slideshow}>
+          <ImageSlider />
         </div>
+        <div>
+          <div className={classes.side}>
+            <h1>Free Images For Everyone</h1>
+            <p>Research/share images that you like</p>
+          </div>
+          <div className={classes.desc}>
+            <Link href="/images">Search images</Link>
+            <Link href="/share">Share your images</Link>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section className={classes.section}>
+          <h2 style={{ marginBottom: "20px" }}>Search Images</h2>
+          <MainInput />
+        </section>
+        <section className={classes.section}>
+          <h2>What we provide?</h2>
+          <p>
+            We provide free unlimited image library for users. Users can
+            download images and share their favorite images with the world. It's
+            a place to find new photos that users want and share them to the
+            world.
+          </p>
+          <p>
+            Before share your images, pick your image , submit the form and
+            accept the user term.
+          </p>
+        </section>
+        <section className={classes.section}>
+          <h2>Why Share Your Images?</h2>
+          <p>
+            We provides convenience to users around the world. You can use it
+            for business, homework, school project, etc..
+          </p>
+        </section>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }

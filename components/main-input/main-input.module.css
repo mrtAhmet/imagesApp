@@ -1,0 +1,18 @@
+.input {
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(123, 167, 192);
+  color: black;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input::placeholder {
+  color: black;
+}
+
+.container {
+  margin-bottom: 10px;
+}

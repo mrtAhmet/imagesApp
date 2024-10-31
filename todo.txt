@@ -1,0 +1,13 @@
+Uygulama birkaç sayfadan oluşacak. Bunlar anasayfa,resimlerin gösterildiği sayfa ve kullanıcının resim paylaşacağı sayfa.
+
+------ANA SAYFA------
+Bu sayfa kullanıcıyı karşılayacağım sayfa olacak. Göze hitap eden bir hoşgeldin yazısı ve uygulamada paylaşılan resimlerden birkaçının olduğu bir slider olacak. Aşağı kaydırdığında
+Share image/photo - show images tarzında bir butonlar olacak ve bu butonlar sayfalara yönlendirecek.
+
+------IMAGES------
+Bu sayfada veri tabanından çekilen resimler olacak. Sayfanın başında arama çubuğu(search input) olacak ve fotoları sınıflara göre listeleyebileceğiz. Örneğin araba,kedi,köpek vs...
+Başta sayfada belli sayıda fotoğraf olabilir ve yeni sayfaya aşağıdaki butonlara basarak geçebiliriz ya da "daha fazla yükle" tarzında bir buton olup bastıkça daha fazla resim 
+yüklenir. Fotolara tıklandığında ise yeni sekme açılır ve fotoğraf büyük bir şekilde o sekmede gözükür. Bu sekmede fotoğraf açıklaması da yazar. 
+
+------SHARE IMAGES------
+Burada ise basit bir form olacak ve fotoğraf yükleyebileceğimiz buton olacak. Fotoğraf yüklerken kullanıcıdan Ad Soyad,Mail,Fotoğraf Başlığı ve Fotoğraf Açıklaması istenecek.
